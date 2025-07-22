@@ -125,9 +125,8 @@ if ($allFoundExtensions.Count -eq 0) {
     exit 0
 }
 
-# *** NEW: Filter the list to get only unique extensions ***
+# Filter so it only shows one of each extension
 $uniqueExtensions = $allFoundExtensions | Sort-Object -Property ExtensionID -Unique
-# *** END of new logic ***
 
 Write-Host "Found $($uniqueExtensions.Count) unique extension(s)."
 
